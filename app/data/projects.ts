@@ -93,5 +93,7 @@ export const OTHER_PROJECTS: Project[] = [
     description: "A Netflix-style movie app built to practice React.",
     stack: ["React"],
     image: "/projects/chillmovie.png",
+    liveUrl: "https://chill-movie-app-tau.vercel.app/",
+    liveLabel: "Live Site",
   },
 ];
