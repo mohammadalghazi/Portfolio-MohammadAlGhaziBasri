@@ -51,7 +51,7 @@ export default function Hero() {
           variants={item}
           className="text-4xl sm:text-6xl font-medium leading-tight"
         >
-          Mohammad Al Ghazi <span className="text-accent">Basri</span>
+          Mohammad Al <span className="text-accent">Ghazi</span> Basri
         </motion.h1>
 
         <motion.p variants={item} className="text-lg sm:text-xl text-ink-muted">

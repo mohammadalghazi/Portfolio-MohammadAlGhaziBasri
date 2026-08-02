@@ -83,7 +83,7 @@ export const OTHER_PROJECTS: Project[] = [
       "A prototype for the DKI Jakarta provincial archery board — news, events, and athlete rankings.",
     stack: ["Laravel"],
     image: "/projects/perpani.png",
-    liveUrl: "https://perpani-dki.vercel.app",
+    liveUrl: "https://prototype-perpani-dki.vercel.app/",
     liveLabel: "View Prototype",
   },
   {

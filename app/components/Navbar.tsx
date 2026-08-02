@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo / name */}
         <a href="#" className="font-heading font-medium text-lg">
-          Al Ghazi <span className="text-accent">Basri</span>
+          Al <span className="text-accent">Ghazi</span> Basri
         </a>
 
         {/* Desktop links */}
