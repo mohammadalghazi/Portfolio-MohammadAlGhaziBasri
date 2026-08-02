@@ -1,9 +1,3 @@
-/*
-  Footer
-  Simple site footer with nav links and a dynamic copyright year.
-  new Date().getFullYear() keeps the year current automatically.
-*/
-
 const LINKS = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },

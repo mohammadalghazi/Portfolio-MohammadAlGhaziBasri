@@ -2,14 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/*
-  ThemeToggle
-  - Default theme is dark (no "light" class on <html>).
-  - On first mount, reads the saved choice from localStorage and applies it.
-    This runs during hydration, so any flash is minimal; because dark is the
-    default and most visitors stay on dark, the common case never flashes.
-  - Toggling flips the "light" class on <html> and saves the choice.
-*/
 export default function ThemeToggle() {
   const [isLight, setIsLight] = useState(false);
   const [mounted, setMounted] = useState(false);

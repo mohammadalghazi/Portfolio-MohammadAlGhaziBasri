@@ -2,15 +2,6 @@
 
 import { motion, type Variants } from "framer-motion";
 
-/*
-  Hero
-  - The opening section: intro, name, tagline, CTAs, quick tech tags.
-  - "use client" because Framer Motion animations run in the browser.
-  - Staggered fade-up entrance: each element animates in slightly after the last.
-
-  NOTE: replace the CV link and social URLs with your real ones.
-  Put your profile photo at /public/profile.jpg (or update the src below).
-*/
 
 const container: Variants = {
   hidden: {},
@@ -28,7 +19,7 @@ const item: Variants = {
   },
 };
 
-const TAGS = ["React", "Next.js", "TypeScript", "Node.js"];
+const TAGS = ["Laravel", "React", "Vue.js", "TypeScript", "Tailwind CSS"];
 
 export default function Hero() {
   return (
@@ -42,10 +33,8 @@ export default function Hero() {
         animate="show"
         className="w-full flex flex-col items-center text-center gap-5"
       >
-        {/* Profile photo — replace src with your real image in /public */}
         <motion.div variants={item}>
           <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent/40 bg-surface">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/profile.jpg"
               alt="Mohammad Al Ghazi Basri"
@@ -97,7 +86,6 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* Social links — replace with your real URLs */}
         <motion.div variants={item} className="flex gap-4 mt-3 text-ink-muted">
           <a
             href="https://www.linkedin.com/in/alghazibasri/"

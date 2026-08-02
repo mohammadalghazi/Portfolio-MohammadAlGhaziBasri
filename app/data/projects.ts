@@ -1,16 +1,3 @@
-/*
-  Projects data — the single source of truth for the Projects section.
-  To add/edit a project, change the objects below; the UI updates itself.
-
-  Field notes:
-  - image: path to a screenshot in /public (e.g. "/projects/edushe.png").
-           Put your screenshots in public/projects/.
-  - liveUrl / githubUrl: optional. A button only appears if its URL exists,
-    so client projects (private repos) simply omit githubUrl.
-  - tag: small label shown on the card ("Client", "Personal", "Prototype"...).
-  - role: your role on the project.
-*/
-
 export type Project = {
   title: string;
   tag: string;
@@ -19,7 +6,7 @@ export type Project = {
   stack: string[];
   image: string;
   liveUrl?: string;
-  liveLabel?: string; // defaults to "Live Site"
+  liveLabel?: string;
   githubUrl?: string;
 };
 
@@ -50,7 +37,6 @@ export const FEATURED_PROJECTS: Project[] = [
       "A data management platform for physical trainers — covering athlete data, scheduling, training programs, program recommendations, physical testing, and athlete ranking, all in one place. Built with a university teammate; I led as project manager and frontend developer.",
     stack: ["Laravel", "React 19", "Inertia.js", "Tailwind CSS", "Vite"],
     image: "/projects/strenvo.png",
-    // demo offline — no liveUrl, no githubUrl. Screenshot is the proof.
   },
   {
     title: "GoArchery",
@@ -84,7 +70,7 @@ export const OTHER_PROJECTS: Project[] = [
     role: "Web Developer",
     description:
       "A service website for a professional cleaning company (mattress, sofa, carpet, curtain, and home cleaning) with clear pricing, testimonials, an FAQ, and booking call-to-actions.",
-    stack: [],
+    stack: ["HTML", "CSS", "JavaScript"],
     image: "/projects/bersihmax.png",
     liveUrl: "https://www.bersihmax.com/",
     liveLabel: "Live Site",
@@ -95,7 +81,7 @@ export const OTHER_PROJECTS: Project[] = [
     role: "Frontend",
     description:
       "A prototype for the DKI Jakarta provincial archery board — news, events, and athlete rankings.",
-    stack: [],
+    stack: ["Laravel"],
     image: "/projects/perpani.png",
     liveUrl: "https://perpani-dki.vercel.app",
     liveLabel: "View Prototype",
@@ -107,8 +93,5 @@ export const OTHER_PROJECTS: Project[] = [
     description: "A Netflix-style movie app built to practice React.",
     stack: ["React"],
     image: "/projects/chillmovie.png",
-    // Add your links once ready:
-    // liveUrl: "https://...",
-    // githubUrl: "https://github.com/...",
   },
 ];

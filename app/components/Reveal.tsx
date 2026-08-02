@@ -3,15 +3,6 @@
 import { motion, type Transition } from "framer-motion";
 import { ReactNode } from "react";
 
-/*
-  Reveal
-  Reusable wrapper that fades + slides its children up when they scroll
-  into view. Used across sections for consistent scroll animation.
-
-  - whileInView: animates when the element enters the viewport.
-  - viewport once:true: animation plays a single time (won't replay on scroll up).
-  - delay prop: lets you stagger multiple Reveals in the same section.
-*/
 export default function Reveal({
   children,
   delay = 0,

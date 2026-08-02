@@ -3,12 +3,6 @@
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
-/*
-  Navbar
-  - Sticky top bar. Desktop: horizontal links. Mobile: hamburger menu.
-  - Links use anchor hrefs (#about, #projects...) that scroll to sections.
-  - Central NAV_LINKS array = single source of truth (change once, updates everywhere).
-*/
 const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },

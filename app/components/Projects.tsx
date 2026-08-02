@@ -6,13 +6,6 @@ import {
   type Project,
 } from "../data/projects";
 
-/*
-  Projects section
-  - Featured: large cards that alternate image left/right on desktop.
-  - Other: compact grid below.
-  Buttons render conditionally: a link only shows if its URL exists.
-*/
-
 function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="flex flex-wrap gap-3 mt-5">
@@ -56,7 +49,6 @@ function FeaturedCard({
             reversed ? "md:order-2" : ""
           }`}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={project.image}
             alt={`${project.title} screenshot`}
@@ -100,7 +92,6 @@ function OtherCard({ project }: { project: Project }) {
     <Reveal>
       <div className="bg-surface border border-border rounded-2xl overflow-hidden h-full flex flex-col hover:border-accent/50 transition-colors">
         <div className="border-b border-border bg-surface-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={project.image}
             alt={`${project.title} screenshot`}

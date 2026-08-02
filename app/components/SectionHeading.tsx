@@ -1,11 +1,5 @@
 import Reveal from "./Reveal";
 
-/*
-  SectionHeading
-  Consistent heading block used at the top of each section:
-  a small muted eyebrow line + a large title.
-  Example: eyebrow="Get To Know More", title="About Me".
-*/
 export default function SectionHeading({
   eyebrow,
   title,

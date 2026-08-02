@@ -1,12 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
-/*
-  Contact section
-  Clickable channel cards (no form) — the most reliable way for recruiters
-  to reach you. Each opens the right app via its href scheme.
-  Data-driven: edit CHANNELS to change or reorder.
-*/
 
 const CHANNELS = [
   {

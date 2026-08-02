@@ -1,12 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
-/*
-  Beyond Code section
-  Personal background (archery) framed as transferable skills.
-  Three cards, each with an inline SVG icon that inherits the accent color.
-  Data-driven: edit ITEMS to change content; icons are keyed by `icon`.
-*/
 
 const ITEMS = [
   {

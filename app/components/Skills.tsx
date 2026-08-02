@@ -1,19 +1,27 @@
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
-/*
-  Skills section
-  - Two groups (Frontend, Backend) rendered as clean pills, no skill levels.
-  - Data-driven: edit the arrays below to change skills; the UI updates itself.
-*/
 const SKILL_GROUPS = [
   {
-    title: "Frontend Development",
-    skills: ["HTML", "CSS", "JavaScript", "React JS", "TypeScript", "Next JS"],
+    title: "Frontend",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vue.js",
+      "Next.js",
+      "Tailwind CSS",
+    ],
   },
   {
-    title: "Backend Development",
-    skills: ["Node JS", "Express JS", "REST API", "Git"],
+    title: "Backend",
+    skills: ["Laravel", "PHP", "Inertia.js", "REST API", "MySQL"],
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "Vite", "Filament"],
   },
 ];
 
@@ -22,7 +30,7 @@ export default function Skills() {
     <section id="skills" className="max-w-6xl mx-auto px-6 py-24 scroll-mt-16">
       <SectionHeading eyebrow="Explore My" title="Skills" />
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         {SKILL_GROUPS.map((group, i) => (
           <Reveal key={group.title} delay={i * 0.1}>
             <div className="bg-surface border border-border rounded-2xl p-8 h-full">

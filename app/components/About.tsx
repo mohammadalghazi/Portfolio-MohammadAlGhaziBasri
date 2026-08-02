@@ -1,12 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
-/*
-  About section
-  - Two columns on desktop (photo + details), stacked on mobile.
-  - Two small info cards (Experience, Education) above the bio.
-  - Put your about photo at /public/about.jpg (or update the src).
-*/
 export default function About() {
   return (
     <section id="about" className="max-w-6xl mx-auto px-6 py-24 scroll-mt-16">
@@ -16,7 +10,6 @@ export default function About() {
         {/* Photo */}
         <Reveal className="flex justify-center">
           <div className="w-72 h-72 rounded-3xl overflow-hidden border border-border bg-surface">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/about.jpg"
               alt="Mohammad Al Ghazi Basri"

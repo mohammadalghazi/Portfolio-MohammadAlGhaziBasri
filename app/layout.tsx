@@ -26,11 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-/*
-  No inline <script> here. The theme is initialized by ThemeInit (a client
-  component) which runs the moment the app hydrates. suppressHydrationWarning
-  on <html> prevents warnings from the class being adjusted on the client.
-*/
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
