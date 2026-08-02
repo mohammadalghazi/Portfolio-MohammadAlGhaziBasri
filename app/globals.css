@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Tailwind v4 uses CSS-based configuration.
+  This @theme block defines our design tokens (colors, fonts).
+  Every token here becomes a Tailwind utility, e.g. `bg-accent`, `text-ink`, `font-heading`.
+*/
+@theme {
+  /* ---- Amber accent scale (our brand color) ---- */
+  --color-accent-50: #faeeda;
+  --color-accent-100: #fac775;
+  --color-accent-200: #f09f27;
+  --color-accent: #ef9f27; /* main accent */
+  --color-accent-600: #ba7517;
+  --color-accent-800: #633806;
+
+  /* ---- Neutral / surface scale (dark theme base) ---- */
+  --color-bg: #0f0f12; /* page background (dark) */
+  --color-surface: #16161a; /* cards, raised areas */
+  --color-surface-2: #1d1d22; /* hover / elevated */
+  --color-border: #2a2a30; /* hairline borders */
+
+  /* ---- Text ---- */
+  --color-ink: #f4f4f5; /* primary text */
+  --color-ink-muted: #a1a1aa; /* secondary text */
+  --color-ink-faint: #71717a; /* hints, captions */
+
+  /* ---- Fonts (wired to next/font variables set in layout.tsx) ---- */
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/*
+  Light-mode overrides. When <html> has class "light", these values
+  replace the dark defaults above. We keep dark as the default.
+*/
+.light {
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1efe8;
+  --color-border: #e5e3db;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #55555a;
+  --color-ink-faint: #8a8a90;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---- Base element styling ---- */
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }
