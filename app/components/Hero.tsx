@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 /*
   Hero
@@ -12,16 +12,20 @@ import { motion } from "framer-motion";
   Put your profile photo at /public/profile.jpg (or update the src below).
 */
 
-const container = {
+const container: Variants = {
   hidden: {},
   show: {
     transition: { staggerChildren: 0.12 },
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 const TAGS = ["React", "Next.js", "TypeScript", "Node.js"];
@@ -58,7 +62,7 @@ export default function Hero() {
           variants={item}
           className="text-4xl sm:text-6xl font-medium leading-tight"
         >
-          Mohammad Al <span className="text-accent">Ghazi</span> Basri
+          Mohammad Al Ghazi <span className="text-accent">Basri</span>
         </motion.h1>
 
         <motion.p variants={item} className="text-lg sm:text-xl text-ink-muted">
